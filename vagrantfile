@@ -1,0 +1,19 @@
+Vagrant.configure("2") do |config|
+  my_ssh_key = `cat $HOME/.ssh/id_rsa.pub`
+  puts "\n\n\nssh key \e#{my_ssh_key}\e[0m\n\n\n"
+  N = 1
+  (1..N).each do |machine_id|
+    config.vm.define "app#{machine_id}" do |app|
+      app.vm.provision :shell, :path => "user.sh", :args => "#{my_ssh_key}"
+      app.vm.box_check_update = false
+      app.vm.provider "virtualbox" do |v|
+        v.memory = 3000
+        v.cpus = 2
+        v.name = "app#{machine_id}"
+      end
+      app.vm.box = "ubuntu/trusty64"
+      puts "\n\n\nIP will be \e[36m192.168.20.#{100+machine_id}\e[0m\n\n\n"
+      app.vm.network :private_network, ip: "192.168.20.#{100+machine_id}"
+    end
+  end
+end

@@ -1,0 +1,9 @@
+- name: Playbook to install the ELK stack  Beats
+  hosts: ElsSTack
+  user: appuser
+  sudo: True
+  roles:
+  - { role: java }
+  - { role: elasticsearch }
+  - { role: kibana }
+  - { role: metricbeat }
