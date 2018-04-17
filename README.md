@@ -40,10 +40,9 @@ VirtualBox, Hyper-V, Docker containers, VMware, and AWS
 - You can change memory size "v.memory" , CPU size "v.cpus" , inventory path "ansible.inventory_path" , Playbook "ansible.playbook" , verbose "ansible.verbose"
 
 **How to Use**
-1. Put Your machine Ip in myhosts file under "ElsSTack" Group 
+1. Put **Any Machine IP** in myhosts file under "ElsSTack" Group 
 2. Open Terminal on the same Directory
-3. Run "vagrant up" To build Your machines that in "myhosts" file 
-4. Run "ansible-playbook -i myhosts ELKPlayBook.yaml
-5. Add any IP in "myhosts" file as you like under "ElsSTack" group
+3. Run "vagrant up" To build Your machines **Read vagrantfile** For More information 
+4. Run "ansible-playbook -i myhosts ELKPlayBook.yaml"
 5. Run "vagrant provision" when modify any thing in any file like: add machin in "myhosts" file
 
