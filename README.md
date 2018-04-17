@@ -42,6 +42,8 @@ VirtualBox, Hyper-V, Docker containers, VMware, and AWS
 **How to Use**
 1. Put Your machine Ip in myhosts file under "ElsSTack" Group 
 2. Open Terminal on the same Directory
-3. Run "vagrant up" To build Your machines that in "myhosts" file and run ansible-play book you can read "vagrantfile" for more information
-4. Run "vagrant provision" when modify any thing in any file like: add machin in "myhosts" file
+3. Run "vagrant up" To build Your machines that in "myhosts" file 
+4. Run "ansible-playbook -i myhosts ELKPlayBook.yaml
+5. Add any IP in "myhosts" file as you like under "ElsSTack" group
+5. Run "vagrant provision" when modify any thing in any file like: add machin in "myhosts" file
 
