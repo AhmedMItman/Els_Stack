@@ -45,4 +45,5 @@ VirtualBox, Hyper-V, Docker containers, VMware, and AWS
 3. Run "vagrant up" To build Your machines **Read vagrantfile** For More information 
 4. Run "ansible-playbook -i myhosts ELKPlayBook.yaml"
 5. Run "vagrant provision" when modify any thing in any file like: add machin in "myhosts" file
+and Run "ansible-playbook -i myhosts ELKPlayBook.yaml"
 
