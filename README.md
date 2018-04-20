@@ -47,3 +47,5 @@ VirtualBox, Hyper-V, Docker containers, VMware, and AWS
 5. Run "vagrant provision" when modify any thing in any file like: add machin in "myhosts" file
 and Run "ansible-playbook -i myhosts ELKPlayBook.yaml"
 
+**How to Run**
+1. in Browser Url you can Enter Machine IP:5601 to Run Kibana
